@@ -6,6 +6,52 @@ Data persistence is through a JSON-powered database called [`lowdb`](https://git
 
 Validation is built using an assertion library called [`@mapbox/fusspot`](https://github.com/mapbox/fusspot).
 
+## Task
+
+Butterfly critique is already a pretty great API, but we think it would be even better if it let users critique butterflies. Your task is to create new API endpoints that:
+
+1. Allow a user to rate butterflies on a scale of 0 through 5
+1. Allow retrieval of a list of a user's rated butterflies, sorted by rating
+
+You should also provide a small **write-up** that explains the decisions (for instance, the HTTP verbs for new endpoints) and trade-offs you made. If you add any new dependencies, spend some time talking about why you chose them.
+
+You are free to refactor or improve any code you think should be refactored, but please include a note about such changes in your write-up. Any changes you make should be scoped and explained as though you are opening a pull request against an existing codebase used in a production API service.
+
+If you have any questions or concerns, please do not hesitate to contact us!
+
+### What we're looking for
+
+- Your code should be extensible and reusable
+- Your code should be well tested
+- Your code should be tidy and adhere to conventions
+- Your changes should be well-scoped and explained in the write-up
+- Your write-up should be thoughtful and coherent
+
+❗️ Note: please do not write your name anywhere in your solution, since this prevents us from evaluating it anonymously.
+
+### Scoring rubric
+
+You will be scored on the following aspects of your work:
+
+- Endpoint implementation
+- Endpoint design
+- Appropriate testing of new code
+- Tidiness and adherence to conventions
+- Appropriate refactoring
+- Communication in the write-up
+
+0 = poor 1 = adequate 2 = exceptional
+
+The maximum possible score is 12.
+
+## Developing
+
+### Requirements
+
+- Node v14.x
+- npm v6
+
+
 ## Significant Changes
 
 ### Versioning
@@ -106,50 +152,6 @@ It would be nice to see models moved to a separate module and typed with TS to h
 
 Implementation of the database is not decoupled from the `lowdb` module, therefore, the methods called inside `controllers` would become obsolete once refactoring for a real database is required. The regular approach of having a `Base` database model that is overloaded with either `LocalFsDB` or `MongoDB` adapters should suffice, but the implementation requires further investigation into project resources.
 
-## Task
-
-Butterfly critique is already a pretty great API, but we think it would be even better if it let users critique butterflies. Your task is to create new API endpoints that:
-
-1. Allow a user to rate butterflies on a scale of 0 through 5
-1. Allow retrieval of a list of a user's rated butterflies, sorted by rating
-
-You should also provide a small **write-up** that explains the decisions (for instance, the HTTP verbs for new endpoints) and trade-offs you made. If you add any new dependencies, spend some time talking about why you chose them.
-
-You are free to refactor or improve any code you think should be refactored, but please include a note about such changes in your write-up. Any changes you make should be scoped and explained as though you are opening a pull request against an existing codebase used in a production API service.
-
-If you have any questions or concerns, please do not hesitate to contact us!
-
-### What we're looking for
-
-- Your code should be extensible and reusable
-- Your code should be well tested
-- Your code should be tidy and adhere to conventions
-- Your changes should be well-scoped and explained in the write-up
-- Your write-up should be thoughtful and coherent
-
-❗️ Note: please do not write your name anywhere in your solution, since this prevents us from evaluating it anonymously.
-
-### Scoring rubric
-
-You will be scored on the following aspects of your work:
-
-- Endpoint implementation
-- Endpoint design
-- Appropriate testing of new code
-- Tidiness and adherence to conventions
-- Appropriate refactoring
-- Communication in the write-up
-
-0 = poor 1 = adequate 2 = exceptional
-
-The maximum possible score is 12.
-
-## Developing
-
-### Requirements
-
-- Node v14.x
-- npm v6
 
 ### Setup
 
